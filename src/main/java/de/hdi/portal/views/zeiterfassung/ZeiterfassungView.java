@@ -46,12 +46,10 @@ public class ZeiterfassungView extends Div {
     
     @PostConstruct
     public void init() {
-    	System.out.println("ZeiterfassungView.init");
     	UserInfo user = service.load();
     	if ( !service.isRegistrationValid(user) ) {
-//    		this.getUI().ifPresent(ui -> ui.navigate(RegistrierungView.class));
-    		System.out.println("Fuck");
     		UI.getCurrent().navigate(RegistrierungView.class);
+    		UI.getCurrent().getPage().reload();
     	}
     }
 

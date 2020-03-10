@@ -9,6 +9,7 @@ import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
@@ -35,13 +36,10 @@ public class MainView extends AppLayout {
 	
     public MainView() {
         setPrimarySection(Section.DRAWER);
-        addToNavbar(false, new DrawerToggle());
+        addToNavbar(false, new DrawerToggle(), new H3("HDI Mitarbeiter Portal"));
         menu = createMenuTabs();
         addToDrawer(menu);
         setDrawerOpened(false);
-        
-        // TODO Headline/Überschrift "Mitarbeiter Portal"
-        
     }
 
     private static Tabs createMenuTabs() {
@@ -78,8 +76,7 @@ public class MainView extends AppLayout {
     @Override
     protected void afterNavigation() {
         super.afterNavigation();
-//        selectTab();
-        System.out.println("MainView.afterNavigation");
+        selectTab();
     }
 
     private void selectTab() {

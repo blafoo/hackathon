@@ -18,8 +18,7 @@ public class PortalService {
 	private static final String HDI_PERSONALNUMMER = "HDI_PERSONALNUMMER";
 
 	public boolean isRegistrationValid(UserInfo user) {
-//		return user.getPin() != null;
-		return false;
+		return user.getPin() != null;
 	}
 	
 	/**

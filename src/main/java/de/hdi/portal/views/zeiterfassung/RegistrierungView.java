@@ -52,7 +52,6 @@ public class RegistrierungView extends Div {
     
     @PostConstruct
     public void init() {
-    	System.out.println("RegistrierungView.init");
     	UserInfo user = service.load();
     	personalnummer.setValue(user.getPersonalnummer() != null ? user.getPersonalnummer() : "");
     	pin.setValue(user.getPin() != null ? user.getPin() : "");
