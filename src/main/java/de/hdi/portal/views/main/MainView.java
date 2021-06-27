@@ -19,6 +19,7 @@ import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 
+import de.hdi.portal.views.krankmeldung.KrankmeldungView;
 import de.hdi.portal.views.zeiterfassung.RegistrierungView;
 import de.hdi.portal.views.zeiterfassung.ZeiterfassungView;
 
@@ -55,6 +56,7 @@ public class MainView extends AppLayout {
         final List<Tab> tabs = new ArrayList<>();
         tabs.add(createTab("Registrierung", RegistrierungView.class));
         tabs.add(createTab("Zeiterfassung", ZeiterfassungView.class));
+        tabs.add(createTab("Krankmeldung", KrankmeldungView.class));
         return tabs.toArray(new Tab[tabs.size()]);
     }
 

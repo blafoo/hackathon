@@ -1,5 +1,6 @@
 package de.hdi.portal.backend;
 
+import java.io.InputStream;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
@@ -56,6 +57,10 @@ public class PortalService {
 	
 	public String gehen(UserInfo user) {
 		return String.format("Gehen gebucht um %s", LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm")));
+	}
+	
+	public String krankmeldung(UserInfo user, InputStream is) {
+		return String.format("Krankmeldung übermittelt");
 	}
 
 }
